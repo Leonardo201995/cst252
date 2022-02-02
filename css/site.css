@@ -9,6 +9,10 @@ p {
     margin-left: 20px;
 }
 
+body {
+  background-color: #cccccc;
+}
+
 #content {
     background-color: #cccccc;
     width: 700px;
