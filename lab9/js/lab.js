@@ -5,8 +5,19 @@
  * (c) Copyright by Blub Corp.
  **/
 
-var a = [2000,40,6000,55,20,40,70,1.5,0.5]
+var outputEl = document.getElementById('output');
 
-var b = a.map(function (x) {return x + 2
-});
-document.write(b);
+var oneEl = document.createElement('button');
+var twoEl = document.createElement('button');
+
+oneEl.innerHTML = "Red";
+twoEl.innerHTML = "Blue";
+oneEl.id = "Red";
+twoEl.id = "Blue";
+oneEl.style.color = "red";
+twoEl.style.color = "blue";
+oneEl.style.backgroundColor = "orange";
+twoEl.style.backgroundColor = "yellow";
+
+outputEl.appendChild(oneEl);
+outputEl.appendChild(twoEl);
