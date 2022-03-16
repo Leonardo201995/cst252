@@ -5,16 +5,27 @@
  * (c) Copyright by Blub Corp.
  **/
 
-for(let i=0;i<$("rainbow-toggle").length;i++) {
-  $(".ranbow-toggle").eg(i).click(function () {
-    $(".rainbow-toggle").eq(i).parent().toggleClass("rainbow-text");
-  });
+function sortingCastle(str) {
+  len = str.length;
+  mod = len % 3;
+  if (mod == 0) {
+    return "Disneyland"
+  }
+  else if (mod == 1) {
+    return "Magic"
+  }
+  else if (mod == 2) {
+    return "Hat"
+  }
+  else if (mod == 3) {
+    return "Train"
+  }
 }
 
-// Changed the color of the buttons
-function updateButtonColor() {
-  let color = $("body").css("background-color");
-  $(".rainbow-toggle").css("background-color", color);
-  return;
-};
-setInterval(updateButtonColor, 40);
+var myButton = document.getElementById("button");
+myButton.addEventListener("click", function() {
+    var name = document.getElementById("input").value;
+    var house = sortingCastle(name);
+    newText = "<p>The Castle has accept you + magic + </p>";
+    document.getElementById("output").innerHTML = newText;
+})
