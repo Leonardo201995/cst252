@@ -7,7 +7,7 @@
 
 function sortingCastle(str) {
   len = str.length;
-  mod = len % 3;
+  mod = len % 4;
   if (mod == 0) {
     return "Disneyland"
   }
