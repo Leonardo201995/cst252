@@ -13,30 +13,17 @@ function checkIfInt(num) {
   }
 }
 
-function chiPotle(topNum) {
-  let returnArray = Array();
-  for(let i=1;i<=topNum;i++) {
-    let outStr = "";
-    if(i % 2 == 0) outStr += "Pico de gayo";
-    if(i % 4 == 0) outStr += "Meat";
-    if(i % 6 == 0) outStr += "Corn";
-    if(i % 9 == 0) outStr += "Cream";
-    outStr == "" ? returnArray.push(i) : returnArray.push(outStr + "!");
+function Vehicle(make, model, year, color, details) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.color = color;
+  this.details = details;
+  this.info = function() {
+    return "Make: " + this.make + "<br>Model: " + this.model + "<br>Year: " + this.year +
+    "<br>Color: " + this.color + "<br>Details: " + this.details;
   }
-  return returnArray;
 }
 
-$("#go-button").click(function() {
-  let chipotleInput = $("#chipotle-input").val();
-  let chipotleOutput = chiPotle(chipotleInput);
-  if(checkIfInt(chipotleInput)) {
-    let outputStr = "";
-    for(var i=0;i<chipotleOutput.length;i++) {
-      outputStr += chipotleOutput[i]
-      if(i < chipotleOutput.length-1) outputStr += "<br>";
-    }
-    $("#chipotle").html(outputStr);
-  } else {
-    $("chipotle").html("Oops sorry, try again until you hit the even!");
-  }
-)
+var jetta =     new Vehicle("Volkswagen", "Jetta", 2014, "Red", "Heated seats");
+var cherokee =  new Vehicle("Jeep", "Cherokee", 1999, "Blue", "New windshield");
